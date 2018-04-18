@@ -1,7 +1,3 @@
-// We need a system for storing books and showing off the most featured ones in our library.
-// The homepage should showcase the books in a way that you find best. When you click a book it
-// should show it with reviews and have a way to check it out or see if it is out of the library.
-// There should also be a design for adding a new book into the system.
 import slugify from 'slugify';
 
 let users = {
@@ -31,6 +27,7 @@ let users = {
     name: 'Peggy Rayzis',
     avatarURL: 'https://pbs.twimg.com/profile_images/783341508820893696/JphRM0xk_400x400.jpg',
     reviews: [2, 12, 13],
+    checked_out: [],
   },
   lin_clark: {
     id: 'lin_clark',
@@ -231,22 +228,31 @@ export function _createBook(book) {
   return new Promise((res, rej) => {
     let { valid, missingKeys } = validateBook(book);
     if (!valid) {
-      rej({
+      return rej({
         error: `Missing key${missingKeys.length > 1 ? 's' : ''} \`${missingKeys.join('`, `')}\``,
       });
     }
     const formattedBook = formatBook(book);
     if (books[formattedBook.id]) {
-      rej({ error: 'Book with that title already exists' });
+      return rej({ error: 'Book with that title already exists' });
+    }
+
+    let checkingOutUser = users[formattedBook.checked_out];
+    if (formattedBook.checked_out.length && !checkingOutUser) {
+      return rej({
+        error: `No user in database found for checked out book user \`${
+          formattedBook.checked_out
+        }\``,
+      });
     }
     setTimeout(() => {
-      let checkingOutUser = users[formattedBook.checked_out];
       books = {
         ...books,
         [formattedBook.id]: formattedBook,
       };
+
       if (checkingOutUser) {
-        checkoutBook(check);
+        checkoutBook(checkingOutUser, formattedBook.id);
       }
 
       res(formattedBook);
@@ -258,19 +264,26 @@ export function _updateBook(book) {
   return new Promise((res, rej) => {
     let { valid, missingKeys } = validateBook(book);
     if (!valid) {
-      rej({
+      return rej({
         error: `Missing key${missingKeys.length > 1 ? 's' : ''} \`${missingKeys.join('`, `')}\``,
       });
     }
     const formattedBook = formatBook(book);
     const existingBook = books[formattedBook.id];
     if (!existingBook) {
-      rej({ error: 'Book could not be found' });
+      return rej({ error: 'Book could not be found' });
+    }
+
+    let checkedOutUser = users[existingBook.checked_out];
+    let checkingOutUser = users[formattedBook.checked_out];
+    if (formattedBook.checked_out.length && !checkingOutUser) {
+      return rej({
+        error: `No user in database found for checked out book user \`${
+          formattedBook.checked_out
+        }\``,
+      });
     }
     setTimeout(() => {
-      let checkedOutUser = users[existingBook.checked_out];
-      let checkingOutUser = users[formattedBook.checked_out];
-
       books = {
         ...books,
         [formattedBook.id]: formattedBook,
