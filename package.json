@@ -1,8 +1,11 @@
 {
   "name": "books-mock-api",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A mock api for frontend projects to integrate with.",
   "main": "lib/index.js",
+  "files": [
+    "lib/"
+  ],
   "repository": "https://github.com/audiolion/books-mock-api",
   "author": "Ryan Castner <castner.rr@gmail.com>",
   "license": "MIT",
