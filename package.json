@@ -1,6 +1,6 @@
 {
   "name": "books-mock-api",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A mock api for frontend projects to integrate with.",
   "main": "lib/index.js",
   "files": [
