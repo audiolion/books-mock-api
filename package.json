@@ -1,6 +1,6 @@
 {
   "name": "books-mock-api",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "A mock api for frontend projects to integrate with.",
   "main": "lib/index.js",
   "repository": "https://github.com/audiolion/books-mock-api",
