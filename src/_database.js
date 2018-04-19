@@ -13,7 +13,7 @@ let users = {
     name: 'Ken Wheeler',
     avatarURL: 'https://pbs.twimg.com/profile_images/985388996011405312/O6rB4xNM_bigger.jpg',
     reviews: [1],
-    checked_out: ['art_of_war'],
+    checked_out: ['the_art_of_war'],
   },
   ryan_florence: {
     id: 'ryan_florence',
@@ -129,8 +129,8 @@ let books = {
     description:
       'Following the success of The Accidental Billionaires and Moneyball comes Console Wars a mesmerizing, behind-the-scenes business thriller that chronicles how Sega, a small, scrappy gaming company led by an unlikely visionary and a team of rebels, took on the juggernaut Nintendo and revolutionized the video game industry. In 1990, Nintendo had a virtual monopoly on the video game industry. Sega, on the other hand, was just a faltering arcade company with big aspirations and even bigger personalities. But that would all change with the arrival of Tom Kalinske, a man who knew nothing about videogames and everything about fighting uphill battles. His unconventional tactics, combined with the blood, sweat and bold ideas of his renegade employees, transformed Sega and eventually led to a ruthless David-and-Goliath showdown with rival Nintendo. The battle was vicious, relentless, and highly profitable, eventually sparking a global corporate war that would be fought on several fronts: from living rooms and schoolyards to boardrooms and Congress. It was a once-in-a-lifetime, no-holds-barred conflict that pitted brother against brother, kid against adult, Sonic against Mario, and the US against Japan. Based on over two hundred interviews with former Sega and Nintendo employees, Console Wars is the underdog tale of how Kalinske miraculously turned an industry punchline into a market leader. Its the story of how a humble family man, with an extraordinary imagination and a gift for turning problems into competitive advantages, inspired a team of underdogs to slay a giant and, as a result, birth a $60 billion dollar industry.',
   },
-  art_of_war: {
-    id: 'art_of_war',
+  the_art_of_war: {
+    id: 'the_art_of_war',
     title: 'The Art of War',
     author: 'Sun Tzu',
     image:
@@ -141,25 +141,25 @@ let books = {
         id: 9,
         user: null,
         rating: 1,
-        book: 'art_of_war',
+        book: 'the_art_of_war',
       },
       {
         id: 10,
         user: null,
         rating: 5,
-        book: 'art_of_war',
+        book: 'the_art_of_war',
       },
       {
         id: 11,
         user: null,
         rating: 3,
-        book: 'art_of_war',
+        book: 'the_art_of_war',
       },
       {
         id: 12,
         user: 'peggy_rayzis',
         rating: 5,
-        book: 'art_of_war',
+        book: 'the_art_of_war',
       },
     ],
     description:
