@@ -3,8 +3,8 @@ const path = require('path');
 module.exports = {
   entry: './index.js',
   output: {
-    filename: 'api.js',
-    path: path.resolve(__dirname, 'dist'),
+    filename: 'index.js',
+    path: path.resolve(__dirname, 'lib'),
     library: 'api',
   },
   mode: 'production',

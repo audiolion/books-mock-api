@@ -2,12 +2,13 @@
   "name": "books-mock-api",
   "version": "0.1.0",
   "description": "A mock api for frontend projects to integrate with.",
-  "main": "dist/api.js",
+  "main": "lib/index.js",
   "repository": "https://github.com/audiolion/books-mock-api",
   "author": "Ryan Castner <castner.rr@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --config ./webpack.config.js"
+    "build": "webpack --config ./webpack.config.js",
+    "build:prod": "webpack --config ./webpack.config.js --mode=production"
   },
   "dependencies": {
     "slugify": "^1.2.9"
