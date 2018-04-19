@@ -5,9 +5,11 @@ import {
   updateBook,
 } from './api';
 
-export {
+const api = {
   getUsers,
   getBooks,
   createBook,
   updateBook,
 };
+
+export default api;

@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack --config ./webpack.config.js",
-    "build:prod": "webpack --config ./webpack.config.js --mode=production"
+    "build:prod": "webpack --config ./webpack.config.js --mode=production && babel src --out-dir lib"
   },
   "dependencies": {
     "slugify": "^1.2.9"
