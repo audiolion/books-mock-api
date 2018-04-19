@@ -5,7 +5,7 @@ This is a mock api to use for frontend applications that simulates a simple book
 ## Usage
 
 ```js
-import api from 'api';
+import api from 'books-mock-api';
 
 const users = await api.getUsers();
 
