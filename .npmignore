@@ -1,10 +1,7 @@
 .babelrc
 .gitignore
-_database.js
-api.js
-index.html
-index.js
 webpack.config.js
 yarn-error.log
 yarn.lock
 src
+index.html
