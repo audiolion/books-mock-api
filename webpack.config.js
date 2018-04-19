@@ -7,5 +7,5 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     library: 'api',
   },
-  mode: 'development',
+  mode: 'production',
 };
