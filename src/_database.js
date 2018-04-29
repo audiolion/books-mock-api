@@ -192,7 +192,7 @@ function generateID(title) {
 function formatBook(book) {
   return {
     ...book,
-    checked_out: !book.checked_out ? [] : book.checked_out,
+    checked_out: !book.checked_out ? null : book.checked_out,
     id: generateID(book.title),
   };
 }
